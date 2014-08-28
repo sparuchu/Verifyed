@@ -1,0 +1,333 @@
+{{> signupheader}}
+
+<body class="no-skin">
+<div class="navbar_signup navbar-inverse1 navbar-fixed-top">
+    <div class="loggedout_menubar">
+        <div class="navbar-header pull-left">
+            <a href="#">
+                <div class="img_logo">
+                    <img src="images/verifyed_logo_main.png" />
+                </div>
+            </a>
+        </div>
+        <div class="navbar-header pull-right">
+            <div class="login_block">
+                <table cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td class="blk_misc">
+                            <label for="email">
+                                Email
+                            </label>
+                        </td>
+                        <td class="blk_misc">
+                            <label for="pass">
+                                Password
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="email" class="inputtext" type="text" name="email" value="" tabindex="1" />
+                        </td>
+                        <td>
+                            <input id="pass" class="inputtext" type="password" name="pass" tabindex="2" />
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-sm" type="button">
+                                <i class="ace-icon fa fa-key"></i>
+                                Login
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="login_form_label_field">
+                            <div>
+                                <input id="persist_box" type="checkbox" name="persistent" value="1" checked="1" />
+                                <label for="persist_box">
+                                    Remember me
+                                </label>
+                            </div>
+                            <input type="hidden" name="default_persistent" value="1"></input>
+                        </td>
+                        <td class="login_form_label_field">
+                            <a rel="nofollow" href="https://www.verifyed.com/pass/recover">
+                                Forgot your password?
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+<script type="text/javascript">
+    try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+</script>
+
+
+<!-- /section:basics/sidebar -->
+<div class="main-content">
+<!-- #section:basics/content.breadcrumbs -->
+<!-- /section:basics/content.breadcrumbs -->
+<div class="page-content">
+
+<!-- /section:settings.box -->
+<div class="page-content-area">
+
+
+<!-- PAGE CONTENT BEGINS -->
+<div class="row">
+
+    <div class="col-xs-9" style="margin-left:100px;margin-top:30px;">
+
+        <div class="col-xs-7">
+            <span style="font-size:24px;font-weight:bold">Be part of a vibrant community to help combat fraud while you earn.</span>
+            <span style="display:block;font-size:18px;margin-top:20px;"><b>Receive verification requests</b>  from other organizations.</span>
+            <span style="display:block;font-size:18px;margin-top:20px;"><b>See detailed activity</b>  inside your account.</span>
+            <span style="display:block;font-size:18px;margin-top:20px;"><b>Discover</b>  how to leverage your  idle data .</span>
+            <img src="images/demo-logo-large.png" alt="Verifyed Demo" height="200" width="320" style="margin-top:30px;" />
+        </div>
+
+
+        <div class="col-xs-5" style="left:5%;margin-top:-14px;">
+            <div class="widget-box">
+                <div class="widget-body">
+
+                    <h3 class="block green">Signup and start earning!</h3>
+
+                    <form id="signup-form" method="post" action="signup">
+
+                        <div class="form-group">
+                            <div class="clearfix">
+                                <input type="text" name="organization" placeholder="Organization" id="organization" class="col-sm-11" />
+                            </div>
+                        </div>
+                        <div class="space-2"></div>
+
+                        <div class="form-group">
+                            <div class="clearfix">
+                                <input type="text" id="firstname" name="firstname" class="signup-col-fname" placeholder="First Name"/>
+                                <input type="text" id="lastname" name="lastname" class="signup-col-lname" placeholder="Last Name"  />
+                            </div>
+                        </div>
+                        <div class="space-2"></div>
+
+                        <div class="form-group">
+                            <div class="clearfix">
+                                <input type="text" name="email" placeholder="Your Official Email" id="email" class="col-sm-11" />
+                            </div>
+                        </div>
+                        <div class="space-2"></div>
+
+                        <div class="form-group">
+                            <div class="clearfix">
+                                <input type="text" name="designation" placeholder="Your Official Designation" id="designation" class="col-sm-11" />
+                            </div>
+                        </div>
+                        <div class="space-2"></div>
+
+                        <div class="form-group">
+                            <div class="clearfix">
+                                <input type="password" name="password" placeholder="Password (Min 8 Chars)" id="password" class="col-sm-11" />
+                            </div>
+                        </div>
+                        <div class="space-2"></div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                <span class="input-group-addon">
+                    +91
+                </span>
+                                <input type="tel" id="phone" name="phone" class="signup-col-phone" placeholder="Phone Number" />
+                            </div>
+                        </div>
+                        <div class="space-2"></div>
+
+                        <div class="form-group">
+                            <label>
+                                <span class="lbl"> By clicking Sign Up, you agree to Verifyed's User Agreement, Privacy Policy and Cookie Policy. </span>
+                            </label>
+                        </div>
+
+                        <!-- #section:plugins/fuelux.wizard.buttons -->
+                        <button type="submit" id="signup_submit" class="btn btn-large btn-primary" data-last="Finish">
+                            Signup
+                        </button>
+
+                    </form>
+                </div>
+            </div><!-- /.widget-body -->
+        </div>
+    </div>
+
+</div><!-- /.row -->
+</div><!-- /.page-content-area -->
+</div><!-- /.page-content -->
+</div><!-- /.main-content -->
+
+    <div class="footer">
+        <div class="footer-inner">
+            <!-- #section:basics/footer -->
+            <div class="footer-content">
+                                <span class="bigger-120">
+                                    <span class="blue bolder">Verifyed</span>
+                                    &copy; 2013-2014
+                                </span>
+
+                &nbsp; &nbsp;
+                                <span class="action-buttons">
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                                    </a>
+                                </span>
+            </div>
+
+            <!-- /section:basics/footer -->
+        </div>
+    </div>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='javascripts/jquery.min.js'>"+"<"+"/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='javascripts/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='javascripts/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="javascripts/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="javascripts/jquery.validate.min.js"></script>
+<script src="javascripts/additional-methods.min.js"></script>
+<script src="javascripts/bootbox.min.js"></script>
+<script src="javascripts/jquery.maskedinput.min.js"></script>
+<script src="javascripts/select2.min.js"></script>
+
+<!-- ace scripts -->
+<script src="javascripts/ace-elements.min.js"></script>
+<script src="javascripts/ace.min.js"></script>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    jQuery(function($) {
+
+        //documentation : http://docs.jquery.com/Plugins/Validation/validate
+        jQuery.validator.addMethod("phone", function (value, element) {
+            return this.optional(element) || /^\d{10}$/.test(value);
+        }, "Enter a valid phone number with 10 digits.");
+
+        jQuery.validator.addMethod("email", function (value, element) {
+            return this.optional(element) || /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(value);
+        }, "Enter a valid email address.");
+
+        $('#signup-form').validate({
+            errorElement: 'div',
+            errorClass: 'help-block',
+            focusInvalid: false,
+            rules: {
+                email: {
+                    required: true,
+                    email:true
+                },
+                password: {
+                    required: true,
+                    minlength: 8
+                },
+                firstname: {
+                    required: true
+                },
+                lastname: {
+                    required: true
+                },
+                phone: {
+                    required: true,
+                    phone: 'required'
+                },
+                designation: {
+                    required: true,
+                    minlength: 2
+                },
+                organization: {
+                    required: true,
+                    minlength: 2
+                }
+            },
+            messages: {
+                email: {
+                    required: "Please specify an email address.",
+                    email: "Please provide a valid email address."
+                },
+                password: {
+                    required: "Please specify a password.",
+                    minlength: "Please specify a secure password (Min 8 Chars)."
+                },
+                firstname: {
+                    required: "Please enter your first name"
+                },
+                lastname: {
+                    required: "Please enter your last name"
+                },
+                organization: {
+                    required: "Please enter your organization name"
+                },
+                designation: {
+                    required: "Please enter your designation"
+                }
+            },
+
+
+            highlight: function (e) {
+                $(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+            },
+
+            success: function (e) {
+                $(e).closest('.form-group').removeClass('has-error');//.addClass('has-info');
+                $(e).remove();
+            },
+
+            errorPlacement: function (error, element) {
+                if(element.is('input[type=checkbox]') || element.is('input[type=radio]')) {
+                    var controls = element.closest('div[class*="col-"]');
+                    if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
+                    else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+                }
+                else if(element.is('.select2')) {
+                    error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+                }
+                else if(element.is('.chosen-select')) {
+                    error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+                }
+                else error.insertAfter(element.parent());
+            },
+
+            invalidHandler: function (form) {
+            }
+        });
+    })
+</script>
+
+</body>
+</html>

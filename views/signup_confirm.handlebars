@@ -1,0 +1,206 @@
+{{> signupheader}}
+
+
+<body class="no-skin">
+<div class="navbar_signup navbar-inverse1 navbar-fixed-top">
+    <div class="loggedout_menubar">
+        <div class="navbar-header pull-left">
+            <a href="#">
+                <div class="img_logo">
+                    <img src="images/verifyed_logo_main.png" />
+                </div>
+            </a>
+        </div>
+        <div class="navbar-header pull-right">
+            <div class="login_block">
+                <table cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td class="blk_misc">
+                            <label for="email">
+                                Email
+                            </label>
+                        </td>
+                        <td class="blk_misc">
+                            <label for="pass">
+                                Password
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="email" class="inputtext" type="text" name="email" value="" tabindex="1" />
+                        </td>
+                        <td>
+                            <input id="pass" class="inputtext" type="password" name="pass" tabindex="2" />
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-sm" type="button">
+                                <i class="ace-icon fa fa-key"></i>
+                                Login
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="login_form_label_field">
+                            <div>
+                                <input id="persist_box" type="checkbox" name="persistent" value="1" checked="1" />
+                                <label for="persist_box">
+                                    Remember me
+                                </label>
+                            </div>
+                            <input type="hidden" name="default_persistent" value="1" />
+                        </td>
+                        <td class="login_form_label_field">
+                            <a rel="nofollow" href="https://www.verifyed.com/pass/recover">
+                                Forgot your password?
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <div class="page-content">
+
+        <div class="widget-box" style="width:70%; margin-top:5%;margin-left:10%">
+        <div class="widget-header widget-header-flat">
+            <h4 class="widget-title smaller">
+               We have received your information
+            </h4>
+        </div>
+        <div class="widget-body">
+        <div class="widget-main">
+        <!-- #section:plugins/fuelux.wizard -->
+        <div id="fuelux-wizard" data-target="#step-container" style="width:95%;margin-top:20px;">
+            <!-- #section:plugins/fuelux.wizard.steps -->
+            <ul class="wizard-steps">
+                <li data-target="#step1" class="active">
+                    <span class="step">1</span>
+                    <span class="title">Registration Started</span>
+                </li>
+
+                <li data-target="#step2">
+                    <span class="step">2</span>
+                    <span class="title">Verification Completed</span>
+                </li>
+
+                <li data-target="#step3">
+                    <span class="step">3</span>
+                    <span class="title">Credentials Issued</span>
+                </li>
+
+                <li data-target="#step4">
+                    <span class="step">4</span>
+                    <span class="title">Start Verification</span>
+                </li>
+            </ul>
+
+            <!-- /section:plugins/fuelux.wizard.steps -->
+        </div>
+
+        <hr />
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <blockquote>
+                        <p class="lighter line-height-125">
+                            Welcome and Thank you for sharing your contact details!<br /><br />
+                            We will contact you shortly to help complete registration process and get you on board.
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+            <hr />
+            {{#userdetails}}
+
+            <div class="row">
+                <div class="col-xs-3">
+                    <address>
+                        <strong>Organization</strong>
+                        <br />
+                        <span style="color:#669FC7">{{organization}}</span>
+                    </address>
+                </div>
+                <div class="col-xs-2">
+                    <address>
+                        <strong>Full Name</strong>
+                        <br />
+                        <span style="color:#669FC7">{{fullname}}</span>
+                    </address>
+                </div>
+                <div class="col-xs-3">
+                    <address>
+                        <strong>Official Email</strong>
+                        <br />
+                        <span style="color:#669FC7">{{email}}</span>
+                    </address>
+                </div>
+                <div class="col-xs-2">
+                    <address>
+                        <strong>Official Designation</strong>
+                        <br />
+                        <span style="color:#669FC7">{{designation}}</span>
+                    </address>
+                </div>
+                <div class="col-xs-2">
+                    <address>
+                        <strong>Phone Number</strong>
+                        <br />
+                        <span style="color:#669FC7">{{phone}}</span>
+                    </address>
+                </div>
+
+            </div>
+
+            {{/userdetails}}
+
+        </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-inner">
+            <!-- #section:basics/footer -->
+            <div class="footer-content">
+                                <span class="bigger-120">
+                                    <span class="blue bolder">Verifyed</span>
+                                    &copy; 2013-2014
+                                </span>
+
+                &nbsp; &nbsp;
+                                <span class="action-buttons">
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                                    </a>
+                                </span>
+            </div>
+
+            <!-- /section:basics/footer -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

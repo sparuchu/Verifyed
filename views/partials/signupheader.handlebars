@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>{{title}}</title>
+
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Semantic META -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Facebook META -->
+    <meta property="fb:app_id" content="APP_ID">
+    <meta property="og:site_name" content="Verifyed - Development Environment">
+    <meta property="og:title" content="Verifyed - Development Environment">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http:// localhost:3000/">
+    <meta property="og:image" content="/img/brand/logo.png">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter META -->
+    <meta name="twitter:title" content="Verifyed - Development Environment">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="http:// localhost:3000/">
+    <meta name="twitter:image" content="/img/brand/logo.png">
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href='images/favicon.png' type="image/x-icon">
+
+    <!--Application CSS Files-->
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="stylesheets/select2.css" />
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="stylesheets/ace-fonts.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="stylesheets/ace.min.css" id="main-ace-style" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+    <script src="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#organization").suggest({
+                key: "AIzaSyBBJoStIWMWfWkgHIoRtLCCAg8B4ay2Vk8"
+            });
+            {{!-- {{Field check before submission}} --}}
+
+        });
+
+    </script>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="stylesheets/ace-part2.min.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/ace-skins.min.css" />
+    <link rel="stylesheet" href="stylesheets/ace-rtl.min.css" />
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="stylesheets/ace-ie.min.css" />
+    <![endif]-->    <link rel="stylesheet" href="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.css">
+
+    <!-- ace settings handler -->
+    <script src="javascripts/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+    <script src="javascripts/html5shiv.min.js"></script>
+    <script src="javascripts/respond.min.js"></script>
+    <![endif]-->
+
+</head>
