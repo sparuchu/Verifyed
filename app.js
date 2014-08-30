@@ -30,3 +30,12 @@ app.listen(config.port, function() {
 });
 
 module.exports = app;
+module.exports = {
+    sayHelloInEnglish: function() {
+        return "HELLO";
+    },
+
+    sayHelloInSpanish: function() {
+        return "Hola";
+    }
+};

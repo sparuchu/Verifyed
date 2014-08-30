@@ -1,6 +1,8 @@
 // server/router/index.js
 // Need to organize routes into individual route path files
 
+
+
 module.exports = function (app) {
     app.get('/',function(req,res)
     {
