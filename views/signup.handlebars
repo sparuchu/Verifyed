@@ -95,7 +95,7 @@
 
 
         <div class="col-xs-5" style="left:5%;margin-top:-14px;">
-            <div class="widget-box">
+            <div class="widget-box" style="border:none;">
                 <div class="widget-body">
 
                     <h3 class="block green">Signup and start earning!</h3>
@@ -111,11 +111,20 @@
 
                         <div class="form-group">
                             <div class="clearfix">
-                                <input type="text" id="firstname" name="firstname" class="signup-col-fname" placeholder="First Name"/>
-                                <input type="text" id="lastname" name="lastname" class="signup-col-lname" placeholder="Last Name"  />
-                            </div>
+
+                        <!-- #section:plugins/input.chosen -->
+                            <select class="form-field-select-1" name="titlename" style="width:15%;">
+                                <option value="" default>Title</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Prof">Prof</option>
+                                <option value="Dr.">Dr.</option>
+                            </select>
+                            <input type="text" id="firstname" name="firstname" class="signup-col-fname" placeholder="First Name"/>
+                            <input type="text" id="lastname" name="lastname" class="signup-col-lname" placeholder="Last Name"  />
                         </div>
-                        <div class="space-2"></div>
+                        <div class="space-8"></div>
 
                         <div class="form-group">
                             <div class="clearfix">
@@ -148,6 +157,7 @@
                         </div>
                         <div class="space-2"></div>
 
+                        <input type="hidden" id="tzoffset" name="tzoffset"/>
                         <div class="form-group">
                             <label>
                                 <span class="lbl"> By clicking Sign Up, you agree to Verifyed's User Agreement, Privacy Policy and Cookie Policy. </span>
@@ -175,7 +185,7 @@
             <!-- #section:basics/footer -->
             <div class="footer-content">
                                 <span class="bigger-120">
-                                    <span class="blue bolder">Verifyed</span>
+                                    <span class="blue bolder">DeccanRock Pvt Ltd.</span>
                                     &copy; 2013-2014
                                 </span>
 
@@ -256,6 +266,9 @@
                     required: true,
                     minlength: 8
                 },
+                titlename: {
+                    required:true
+                },
                 firstname: {
                     required: true
                 },
@@ -284,17 +297,20 @@
                     required: "Please specify a password.",
                     minlength: "Please specify a secure password (Min 8 Chars)."
                 },
+                titlename: {
+                    required: "Please specify title."
+                },
                 firstname: {
-                    required: "Please enter your first name"
+                    required: "Please enter your first name."
                 },
                 lastname: {
-                    required: "Please enter your last name"
+                    required: "Please enter your last name."
                 },
                 organization: {
-                    required: "Please enter your organization name"
+                    required: "Please enter your organization name."
                 },
                 designation: {
-                    required: "Please enter your designation"
+                    required: "Please enter your designation."
                 }
             },
 
@@ -326,6 +342,13 @@
             invalidHandler: function (form) {
             }
         });
+
+        $('#signup-form').on('submit', function () {
+            var d = new Date();
+            $('#tzoffset').val(d.getTimezoneOffset());
+            return;
+        });
+
     })
 </script>
 

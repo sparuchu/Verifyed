@@ -4,38 +4,52 @@
 
 var app = require('./config/express')(),
     config = require('./config/config')(),
+    couchbase = require('couchbase'),
     express = require('express');
 
+/**
+ * Database
+ */
+var db = new couchbase.Connection({
+    'bucket':config.couch.bucket,
+    'host': config.couch.host + ':' + config.couch.port
+}, function(err, db) {
+    if (err) {
+        // Failed to make a connection to the Couchbase cluster.
+        throw err;
+    }
+    else  {
+        console.log(
+                'Successfully connected to couchbase://' + config.couch.host + ':' + config.couch.port + ':' + config.couch.bucket
+        );
+    }
+});
+
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
 
 /**
- * Router
-*/
+ * Routes
+ */
+var routes = require('./routes/index');
+var users = require('./routes/users');
 
-var router = express.Router();
-require('./router')(app);
+app.use('/', routes);
 
 
-// Error Handling
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
+    next();
 });
 
 
 // Start the app by listening on <port>
 app.listen(config.port, function() {
     console.log(
-            'Successfully connected to couch://' + config.couch.host + ':' + config.couch.port,
-            '\nExpress server listening on port ' + config.port
+            'Express server listening on port ' + config.port
     );
 });
 
 module.exports = app;
-module.exports = {
-    sayHelloInEnglish: function() {
-        return "HELLO";
-    },
-
-    sayHelloInSpanish: function() {
-        return "Hola";
-    }
-};

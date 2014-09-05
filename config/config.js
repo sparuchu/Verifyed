@@ -7,7 +7,7 @@ var config = {
         port: 3000,
         couch: {
             bucket: 'verifyed',
-            host: '127.0.0.1',
+            host: 'localhost',
             port: '8091'
         }
     },
@@ -16,7 +16,7 @@ var config = {
         port: 4000,
         couch: {
             bucket: 'verifyed',
-            host: '127.0.0.1',
+            host: 'localhost',
             port: '8091'
         }
     },
@@ -25,7 +25,7 @@ var config = {
         port: 5000,
         couch: {
             bucket: 'verifyed',
-            host: '127.0.0.1',
+            host: 'Enter Server IP',
             port: '8091'
         }
     }

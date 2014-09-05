@@ -14,7 +14,6 @@ var express = require('express'),
     exphbs = require('express3-handlebars'),
     errorhandler = require('errorhandler'),
     helpers = require('../lib/helpers'),
-    couchbase = require('couchbase'),
     _ = require('lodash'),
     glob = require('glob'),
     config = require('./config')(),
@@ -31,16 +30,6 @@ module.exports = function() {
     app.use(cookieParser('verifyed'));
     app.use(session());
 
-    // Database
-    var dbcouch = new couchbase.Connection({
-        'bucket':config.couch.bucket,
-        'host': config.couch.host + ':' + config.couch.port
-    }, function(err) {
-        if (err) {
-            // Failed to make a connection to the Couchbase cluster.
-            throw err;
-        }
-    });
 
     // Handlers
     var errorHandler = require('errorhandler');

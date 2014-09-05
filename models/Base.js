@@ -13,7 +13,7 @@ module.exports.prototype = {
 	setDB: function(db) {
 		this.db = db;
 	},
-	collection: function() {
+	bucket: function() {
 		if(this._collection) return this._collection;
 		return this._collection = this.db.collection('verifyed');
 	}
